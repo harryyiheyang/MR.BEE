@@ -8,7 +8,7 @@ byse1=byse
 byse=byse/byse
 m=nrow(bX)
 p=ncol(bX)
-LD=Matrix(LD,sparse=T)
+LD=as.matrix(LD)
 Theta=solve(LD)
 TC=chol(Theta)
 bXinv=as.matrix(Theta%*%bX)
