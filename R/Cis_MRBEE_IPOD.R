@@ -92,6 +92,13 @@ names(gamma)=rownames(bX)
 indtheta=which(theta!=0)
 indgamma=which(gamma!=0)
 adjf=m/(length(indvalid)-p)
+indvalid=which(gamma==0)
+if(length(indvalid)==m){
+Rxysum=Rxyall
+}else{
+Rxysum=Rxyall-biasterm(RxyList=RxyList,setdiff(1:m,indvalid))
+}
+res=by-matrixVectorMultiply(bX,theta)-matrixVectorMultiply(LD,gamma)
 
 bZ=cbind(bX,as.matrix(LD[,indgamma]))
 TCbZ=as.matrix(TC%*%bZ)

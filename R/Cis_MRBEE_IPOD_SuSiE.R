@@ -120,7 +120,7 @@ Rxysum=Rxyall
 }else{
 Rxysum=Rxyall-biasterm(RxyList=RxyList,setdiff(1:m,indvalid))
 }
-res.theta=by--matrixVectorMultiply(LD,gamma)
+res.theta=by-matrixVectorMultiply(LD,gamma)
 XtX=BtB
 Xty=matrixVectorMultiply(Bt,res.theta)
 yty=sum(res.theta*(Theta%*%res.theta))
