@@ -1,0 +1,28 @@
+Package: MRBEEX
+Type: Package
+Title: Mendelian Randomization using Bias-Correction Estimating Equations with Extended Functions
+Version: 0.1.0
+Author: Yihe Yang
+Maintainer: Yihe Yang <yxy1234@case.edu>
+Description:MRBEEX extends the functionality of the MRBEE package by incorporating advanced methods for Mendelian Randomization (MR) analysis. It introduces the MRBEEX function, which uses bias-corrected estimating equations to mitigate weak instrument bias due to estimation errors in GWAS effect estimates for exposures and outcomes. For addressing horizontal pleiotropy, the package employs the IPOD algorithm to identify uncorrelated horizontal pleiotropy (UHP) and a two-mixture regression model for correlated horizontal pleiotropy (CHP). Additionally, it integrates SuSiE for exposure selection, enhancing interpretability (UseSuSiE=T). The package also includes MRBEEX.UV for univariable MR analysis, offering similar methods for managing UHP and CHP. Both functions support the inclusion of correlated instrumental variables using an LD matrix and provide advanced options for exposure selection and horizontal pleiotropy correction. Furthermore, it offers CisMRBEEX for performing multivariable cis-Mendelian randomization.
+License: MIT LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
+Imports:
+    MASS,
+    Rcpp (>= 1.0.0),
+    RcppArmadillo,
+    FDRestimation,
+    mvtnorm,
+    mixtools,
+    utils,
+    data.table,
+    varbvs,
+    susieR,
+    CppMatrix,
+    Matrix
+Remotes:
+    harryyiheyang/CppMatrix,
+    stephenslab/susieR
+ORCID: 0000-0001-6563-3579
